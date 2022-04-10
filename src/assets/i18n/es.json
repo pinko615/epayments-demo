@@ -1,0 +1,34 @@
+{
+  "menu": {
+    "logo": "ePayments",
+    "menu_1": "Categorías",
+    "menu_2": "Marcas",
+    "menu_3": "Sobre Nosotros",
+    "menu_4": "Ayuda",
+    "menu_5": "Iniciar Sesión",
+    "menu_6": "EN",
+    "menu_7": "ES"
+  },
+  "step_1": {
+    "title": "Mi Información",
+    "subtitle": "Por favor ingrese su información personal y presione continuar",
+    "firstname": "Nombre",
+    "lastname": "Apellido",
+    "button": "Continuar"
+  },
+  "step_2": {
+    "title": "Pago",
+    "subtitle": "Luego de realizar el pago recibirá un email de confirmación con los detalles de su compra",
+    "text_1": "Tarjeta de Crédito",
+    "text_2": "Será redireccionado a una plataforma de pago seguro. Esto es un proceso seguro. La validación del pago puede demorar hasta 24 horas",
+    "back_button": "Atrás",
+    "pay_button": "Pagar"
+  },
+  "step_3": {
+    "title": "Orden",
+    "subtitle_1": "Creando orden...",
+    "subtitle_2": "Orden creada!",
+    "text_1": "Felicitaciones, el pago ha sido exitoso.",
+    "text_2": "Pronto recibirá una confirmación en su email."
+  }
+}

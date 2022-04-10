@@ -1,0 +1,34 @@
+{
+  "menu": {
+    "logo": "ePayments",
+    "menu_1": "Categories",
+    "menu_2": "Brands",
+    "menu_3": "About Us",
+    "menu_4": "Help",
+    "menu_5": "Sign In",
+    "menu_6": "EN",
+    "menu_7": "ES"
+  },
+  "step_1": {
+    "title": "My Data",
+    "subtitle": "Please enter your personal data and press continue",
+    "firstname": "First name",
+    "lastname": "Last name",
+    "button": "Continue"
+  },
+  "step_2": {
+    "title": "Payment",
+    "subtitle": "After making the payment you will receive a confirmation email with details of your purchase",
+    "text_1": "Credit Card",
+    "text_2": "You will be redirected to a secure payment platform. This is a secure process. The validation of your payment can take up to 24 hours.",
+    "back_button": "Back",
+    "pay_button": "Pay"
+  },
+  "step_3": {
+    "title": "Order",
+    "subtitle_1": "Creating order...",
+    "subtitle_2": "Order created!",
+    "text_1": "Congratulations, your payment was successful.",
+    "text_2": "Shortly a confirmation email will arrive to your inbox."
+  }
+}

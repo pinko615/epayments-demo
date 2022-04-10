@@ -1,0 +1,56 @@
+<mat-toolbar color="primary">
+  <div class="section">
+    <button mat-icon-button class="menu__icon" (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <a href="#">
+      <h1>{{ "menu.logo" | translate }}</h1>
+    </a>
+    <div class="links">
+      <button mat-button [matMenuTriggerFor]="categories">
+        {{ "menu.menu_1" | translate }} <mat-icon>expand_more</mat-icon>
+      </button>
+      <mat-menu #categories="matMenu">
+        <button mat-menu-item>{{ "menu.menu_1" | translate }} 1</button>
+        <button mat-menu-item>{{ "menu.menu_1" | translate }} 2</button>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="brands">
+        {{ "menu.menu_2" | translate }} <mat-icon>expand_more</mat-icon>
+      </button>
+      <mat-menu #brands="matMenu">
+        <button mat-menu-item>{{ "menu.menu_2" | translate }} 1</button>
+        <button mat-menu-item>{{ "menu.menu_2" | translate }} 2</button>
+      </mat-menu>
+      <button mat-button>{{ "menu.menu_3" | translate }}</button>
+    </div>
+  </div>
+  <div class="section">
+    <div class="links">
+      <button mat-button>
+        <mat-icon>help_outline</mat-icon>
+        {{ ("menu.menu_4" | translate).toUpperCase() }}
+      </button>
+      <button mat-button>
+        <mat-icon>account_circle</mat-icon>
+        {{ ("menu.menu_5" | translate).toUpperCase() }}
+      </button>
+      <button mat-button [matMenuTriggerFor]="language">
+        <mat-icon>flag</mat-icon>
+        {{ currentLang.toUpperCase() }}
+        <mat-icon>expand_more</mat-icon>
+      </button>
+      <mat-menu #language="matMenu">
+        <button mat-menu-item class="country__flags" (click)="switchLang('en')">
+          <img [src]="enFlag" width="20px" /><span>{{
+            "menu.menu_6" | translate
+          }}</span>
+        </button>
+        <button mat-menu-item class="country__flags" (click)="switchLang('es')">
+          <img [src]="esFlag" width="20px" /><span>{{
+            "menu.menu_7" | translate
+          }}</span>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+</mat-toolbar>

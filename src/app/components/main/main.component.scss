@@ -1,0 +1,126 @@
+.main__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  min-height: 370px;
+
+  .main__card-top {
+    width: 50%;
+  }
+}
+
+.justify {
+  justify-content: space-between;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.mat-stepper-horizontal {
+  background-color: transparent;
+}
+
+.content__container {
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 0 auto;
+
+  p {
+    color: rgba(0, 0, 0, 0.54);
+  }
+
+  h3 {
+    margin-bottom: 0.3rem;
+  }
+}
+
+.action__buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 9rem;
+}
+
+.images__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.text__container {
+  margin-top: 1rem;
+}
+
+mat-progress-bar {
+  width: 60%;
+  margin: 0 auto;
+}
+
+mat-card-header {
+  justify-content: center;
+}
+
+mat-card-actions {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.mat-card-actions .mat-raised-button {
+  margin: 0;
+}
+
+mat-card-content {
+  width: 100%;
+  margin-top: 1rem;
+  p {
+    color: rgba(0, 0, 0, 0.54);
+  }
+  mat-icon {
+    transform: scale(2);
+    margin-bottom: 6px;
+  }
+}
+
+::ng-deep .mat-horizontal-stepper-header-container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .main__card {
+    padding: 2rem 1rem;
+    min-height: 390px;
+  }
+  mat-progress-bar {
+    width: 90%;
+  }
+
+  .action__buttons {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 590px) {
+  .content__container {
+    max-width: 100%;
+  }
+  .main__card-top {
+    min-width: 80%;
+  }
+}
+
+@media (max-width: 420px) {
+  ::ng-deep .mat-horizontal-stepper-header-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .main__card-top {
+    min-width: 100%;
+  }
+}

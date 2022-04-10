@@ -1,0 +1,123 @@
+<mat-stepper linear #stepper labelPosition="bottom">
+  <mat-step [stepControl]="firstFormGroup" [editable]="true">
+    <ng-template matStepLabel>{{ "step_1.title" | translate }}</ng-template>
+    <mat-card class="main__card justify">
+      <div class="main__card-top">
+        <mat-card-header>
+          <mat-card-title>{{ "step_1.title" | translate }}</mat-card-title>
+          <mat-card-subtitle>
+            {{ "step_1.subtitle" | translate }}
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <form [formGroup]="firstFormGroup">
+            <mat-form-field appearance="outline">
+              <mat-label>{{ "step_1.firstname" | translate }}</mat-label>
+              <input matInput required formControlName="firstName" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>{{ "step_1.lastname" | translate }}</mat-label>
+              <input matInput required formControlName="lastName" />
+            </mat-form-field>
+          </form>
+        </mat-card-content>
+      </div>
+      <div class="main__card-bottom">
+        <mat-card-actions>
+          <button
+            type="button"
+            mat-raised-button
+            color="primary"
+            matStepperNext
+            [disabled]="!firstFormGroup.valid"
+          >
+            {{ "step_1.button" | translate }} <mat-icon>chevron_right</mat-icon>
+          </button>
+        </mat-card-actions>
+      </div>
+    </mat-card>
+  </mat-step>
+
+  <mat-step [editable]="false">
+    <ng-template matStepLabel>{{ "step_2.title" | translate }}</ng-template>
+    <mat-card class="main__card justify">
+      <div class="main__card-top">
+        <mat-card-header>
+          <mat-card-title>{{ "step_2.title" | translate }}</mat-card-title>
+          <mat-card-subtitle>
+            {{ "step_2.subtitle" | translate }}
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="content__container">
+            <mat-icon color="primary">credit_card</mat-icon>
+            <h3>{{ "step_2.text_1" | translate }}</h3>
+            <p>
+              {{ "step_2.text_2" | translate }}
+            </p>
+            <div class="images__container">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/1200px-MasterCard_Logo.svg.png"
+                width="50px"
+              />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Old_Visa_Logo.svg/1048px-Old_Visa_Logo.svg.png"
+                width="50px"
+              />
+            </div>
+          </div>
+        </mat-card-content>
+      </div>
+      <div class="main__card-bottom">
+        <mat-card-actions>
+          <div class="action__buttons">
+            <button
+              type="button"
+              mat-raised-button
+              color="primary"
+              matStepperPrevious
+            >
+              <mat-icon>chevron_left</mat-icon>
+              {{ "step_2.back_button" | translate }}
+            </button>
+            <button
+              type="button"
+              mat-raised-button
+              color="primary"
+              matStepperNext
+              (click)="finishOperation()"
+            >
+              {{ "step_2.pay_button" | translate }}
+              <mat-icon>chevron_right</mat-icon>
+            </button>
+          </div>
+        </mat-card-actions>
+      </div>
+    </mat-card>
+  </mat-step>
+
+  <mat-step [editable]="false">
+    <ng-template matStepLabel>{{ "step_3.title" | translate }}</ng-template>
+    <mat-card class="main__card">
+      <mat-card-header>
+        <mat-card-title>{{
+          (isLoading ? "step_3.subtitle_1" : "step_3.subtitle_2") | translate
+        }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-icon *ngIf="!isLoading" color="primary">task_alt</mat-icon>
+        <mat-progress-bar
+          mode="indeterminate"
+          *ngIf="isLoading"
+        ></mat-progress-bar>
+        <div class="text__container" *ngIf="!isLoading">
+          <p>
+            {{ "step_3.text_1" | translate }} <br />{{
+              "step_3.text_2" | translate
+            }}
+          </p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </mat-step>
+</mat-stepper>

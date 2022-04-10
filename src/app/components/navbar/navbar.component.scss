@@ -1,0 +1,44 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+
+  .menu__icon {
+    display: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.links {
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+.country__flags {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  mat-toolbar {
+    .menu__icon {
+      display: block;
+    }
+  }
+  .links {
+    display: none;
+  }
+}
